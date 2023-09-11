@@ -18,6 +18,12 @@ public:
         }
         
         while(true){
+            if(n==1 || n==10 || n==7)
+                return true;
+
+            if(n<10)    
+                return false;
+
             if(st.find(n) != st.end())
                 return false;
                
@@ -31,8 +37,6 @@ public:
                 n/=10;
             }
             
-            if(dss==1 || dss==10)
-                return true;
                 
             n = dss;
         }
