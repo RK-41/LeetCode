@@ -11,7 +11,7 @@ public:
         if(n==1 || n==10)   return true;
         
         unordered_map<int,int> sq;
-        set<int> st;
+        // set<int> st;
         
         for(int i=1; i<10; i++){
             sq[i] = i*i;
@@ -24,10 +24,10 @@ public:
             if(n<10)    
                 return false;
 
-            if(st.find(n) != st.end())
-                return false;
+            // if(st.find(n) != st.end())
+            //     return false;
                
-            st.insert(n);
+            // st.insert(n);
             
             int dss=0;
             // dss: digit-sq-sum
