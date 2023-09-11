@@ -2,6 +2,10 @@ class Solution {
 public:
     vector<vector<int>> groupThePeople(vector<int>& groupSizes) {
         // 11.09.23 POTD
+
+        // the unordered map will map the elements having same group size to a key (their gr size)
+        // the elements having same group size are stored in same queue
+
         unordered_map<int,queue<int>> grEle;
         vector<vector<int>> ans;
 
@@ -13,6 +17,7 @@ public:
             int grSize = g.first;
             auto q = g.second;
 
+            // if q.size == grSize, the q doesn't need to be divided into sub-groups
             if(q.size() == grSize){
                 vector<int> v;
 
@@ -24,10 +29,13 @@ public:
                 ans.push_back(v);
             }
             else{
+            // else, the q has to be divided into sub-groups of size 'grSize'
+
                 while(q.size()){
                     vector<int> v;
                     int sz = grSize;
 
+                    // making a sub-group of size 'grSize'
                     while(sz--){
                         v.push_back(q.front());
                         q.pop();
