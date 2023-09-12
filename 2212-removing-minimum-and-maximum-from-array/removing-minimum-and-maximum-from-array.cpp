@@ -16,9 +16,9 @@ public:
         }
 
         int n = nums.size();
-        int del1 = max(mxi+1, mni+1);
-        int del2 = max(n-mxi, n-mni);
-        int del3 = min(mxi+1, mni+1) + min(n-mxi, n-mni);
+        int del1 = max(mxi+1, mni+1);   // for front deletion only
+        int del2 = max(n-mxi, n-mni);   // for back deletion only
+        int del3 = min(mxi+1, mni+1) + min(n-mxi, n-mni);   // for both-side deletion
 
         return min(min(del1, del2), del3);
     }
