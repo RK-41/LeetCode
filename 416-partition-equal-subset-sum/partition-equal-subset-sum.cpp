@@ -25,15 +25,14 @@ public:
         // is traversed in reverse order from 'sum/2' to 'nums[i-1]'
         // 'dp[j]' is updated if it's a sum of 'j' is achievable with current 
         // element 'nums[i-1]'
+
         for(int i=1; i<=nums.size(); i++){
             for(int j=sum/2; j>=nums[i-1]; j--){
-                
                 // if nums[i-1] <= j, it can either be considered or skipped
-                // if(nums[i-1] <= j){
-                    // dp[j] is updated to true if sum 'j-nums[i-1]' can be 
-                    // formed with previous elements
-                    dp[j] = dp[j] || dp[j-nums[i-1]];
-                // }
+                
+                // dp[j] is updated to true if sum 'j-nums[i-1]' can be 
+                // formed with previous elements
+                dp[j] = dp[j] || dp[j-nums[i-1]];
             }
         }
 
