@@ -3,8 +3,8 @@ public:
     vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
         // 18.09.23 POTD
 
-        // Data Structures Used
-        // 'ans' vector: to store the answer of this problem.
+        // Data Structures Used:
+        // 'ans' vector: to store the row-numbers (answer of this problem).
         // 'pq' priority-queue (min-heap): to store a pair {soldiers[i],i} ie, no. of 
         //      soldiers along with the row-number.
 
