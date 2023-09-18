@@ -13,12 +13,15 @@ public:
 
         // Traversing the matrix
         for(int i=0; i<mat.size(); i++){
-            // Storing no. of soldiers in each row to 'soldiers'
-            //  Since, the soldiers and civilians are represented by a binary value (1 & 0
+            // Since, the soldiers and civilians are represented by a binary value (1 & 0
             //      resprectively), the sum of elements of each row will be the no. of soldiers
             //      in that row
-            //  The 'accumulate()' function finds the sum of elements in the given range
+            // The 'accumulate()' function finds the sum of elements in the given range
+
+            // Initializing the 'soldiers' int variable
             int soldiers = 0;
+
+            // Storing no. of soldiers in each row to 'soldiers'
             soldiers = accumulate(mat[i].begin(), mat[i].end(), soldiers);
 
             // storing the no. of soldiers in current row along with the row-number
