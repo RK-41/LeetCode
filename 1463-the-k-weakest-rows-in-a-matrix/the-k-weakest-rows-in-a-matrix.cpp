@@ -19,13 +19,13 @@ public:
             // The 'accumulate()' function finds the sum of elements in the given range
 
             // Initializing the 'soldiers' int variable
-            int soldiers = 0;
+            // int soldiers = 0;
 
             // Storing no. of soldiers in each row to 'soldiers'
-            soldiers = accumulate(mat[i].begin(), mat[i].end(), soldiers);
+            mat[i][0] = accumulate(mat[i].begin()+1, mat[i].end(), mat[i][0]);
 
             // storing the no. of soldiers in current row along with the row-number
-            pq.push({soldiers,i});
+            pq.push({mat[i][0],i});
         }
 
         // Retrieving top 'k' rows(pair.second) sorted wrt the no. of soldiers(pair.first)
