@@ -18,10 +18,8 @@ public:
             //      in that row
             // The 'accumulate()' function finds the sum of elements in the given range
 
-            // Initializing the 'soldiers' int variable
-            // int soldiers = 0;
-
-            // Storing no. of soldiers in each row to 'soldiers'
+            // Storing no. of soldiers in each row to 'mat[i][0]' (ie, first element of each
+            //      row represent the no. of soldiers in that row)
             mat[i][0] = accumulate(mat[i].begin()+1, mat[i].end(), mat[i][0]);
 
             // storing the no. of soldiers in current row along with the row-number
