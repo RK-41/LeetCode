@@ -5,29 +5,24 @@ public:
 
         // Data Structures Used
         // 'ans' vector: to store the answer of this problem.
-        // 'soldiers' unordered-map: to map each row(0-indexed) to the no. of 
-        //      soldiers(1's) in that row.
         // 'pq' priority-queue (min-heap): to store a pair {soldiers[i],i} ie, no. of 
         //      soldiers along with the row-number.
 
         vector<int> ans;
-        unordered_map<int,int> soldiers;
         priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
 
         // Traversing the matrix
         for(int i=0; i<mat.size(); i++){
-            // Storing no. of soldiers in each row
-            // for(int j=0; j<mat[0].size(); j++){
-            //     if(mat[i][j]==0)    break;
-
-            //     soldiers[i]+=mat[i][j];
-            // }
-
-            int sum = 0;
-            sum = accumulate(mat[i].begin(), mat[i].end(), sum);
+            // Storing no. of soldiers in each row to 'soldiers'
+            //  Since, the soldiers and civilians are represented by a binary value (1 & 0
+            //      resprectively), the sum of elements of each row will be the no. of soldiers
+            //      in that row
+            //  The 'accumulate()' function finds the sum of elements in the given range
+            int soldiers = 0;
+            soldiers = accumulate(mat[i].begin(), mat[i].end(), soldiers);
 
             // storing the no. of soldiers in current row along with the row-number
-            pq.push({sum,i});
+            pq.push({soldiers,i});
         }
 
         // Retrieving top 'k' rows(pair.second) sorted wrt the no. of soldiers(pair.first)
