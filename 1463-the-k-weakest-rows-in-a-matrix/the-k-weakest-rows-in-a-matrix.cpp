@@ -17,14 +17,17 @@ public:
         // Traversing the matrix
         for(int i=0; i<mat.size(); i++){
             // Storing no. of soldiers in each row
-            for(int j=0; j<mat[0].size(); j++){
-                if(mat[i][j]==0)    break;
+            // for(int j=0; j<mat[0].size(); j++){
+            //     if(mat[i][j]==0)    break;
 
-                soldiers[i]+=mat[i][j];
-            }
+            //     soldiers[i]+=mat[i][j];
+            // }
+
+            int sum = 0;
+            sum = accumulate(mat[i].begin(), mat[i].end(), sum);
 
             // storing the no. of soldiers in current row along with the row-number
-            pq.push({soldiers[i],i});
+            pq.push({sum,i});
         }
 
         // Retrieving top 'k' rows(pair.second) sorted wrt the no. of soldiers(pair.first)
