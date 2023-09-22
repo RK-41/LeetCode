@@ -7,10 +7,9 @@ public:
 
         while(i<s.size() && j<t.size()){
             if(s[i]==t[j]){
-                i++, j++;
+                i++;
             }
-            else
-                j++;
+            j++;
         }
 
         if(i==s.size())
