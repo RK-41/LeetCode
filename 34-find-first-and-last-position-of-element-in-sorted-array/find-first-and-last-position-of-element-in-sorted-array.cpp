@@ -2,6 +2,8 @@ class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
         
+        // 22.09.23
+        
         int first=-1, last=-1, n=nums.size();
 
         // Finding first position
