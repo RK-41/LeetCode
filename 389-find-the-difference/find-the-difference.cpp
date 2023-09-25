@@ -4,7 +4,6 @@ public:
         // 25.09.23 POTD
 
         return accumulate(t.begin(), t.end(), 0) - accumulate(s.begin(), s.end(), 0);
-        // return d;
 
         // int d=0;
         // for(int i=0; i<s.size(); i++){
