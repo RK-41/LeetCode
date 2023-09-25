@@ -8,8 +8,7 @@ public:
         for(int i=0; i<s.size(); i++){
             d -= s[i],  d += t[i];
         }
-        d += t.back();
 
-        return d;
+        return d==0? t.back() : d+t.back();
     }
 };
