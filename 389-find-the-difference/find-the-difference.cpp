@@ -6,7 +6,7 @@ public:
         int d=0;
 
         for(int i=0; i<s.size(); i++){
-            d -= s[i], d += t[i];
+            d -= s[i],  d += t[i];
         }
         d += t.back();
 
