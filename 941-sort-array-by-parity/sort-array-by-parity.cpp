@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> sortArrayByParity(vector<int>& nums) {
-        // 28.09.23
+        // 28.09.23 POTD
 
         int i=0, j=nums.size()-1;
 
