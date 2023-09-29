@@ -3,7 +3,7 @@ public:
     bool isMonotonic(vector<int>& nums) {
         // 29.09.23 POTD
 
-        int inc=1, dec=1;;
+        unsigned int inc=1, dec=1;;
 
         for(int i=1; i<nums.size(); i++){
             if(nums[i-1]<=nums[i])
