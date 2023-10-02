@@ -2,11 +2,12 @@ class Solution {
 public:
     string reverseWords(string s) {
         // 01.10.23 POTD
+        stack<string> st;
+        string t;
 
-        string t, ans;
         for(int i=s.size()-1; i>=0; i--){
             if(s[i]==' '){
-                ans = t + " " + ans;
+                st.push(t);
                 t="";
             }
             else{
@@ -14,9 +15,17 @@ public:
             }
         }
 
-        ans = t + " " + ans;
-        ans.pop_back();
+        st.push(t);
 
-        return ans;
+        t="";
+
+        while(st.size()){
+            t += st.top();
+            st.pop();
+
+            if(st.size())   t+=" ";
+        }
+
+        return t;
     }
 };
