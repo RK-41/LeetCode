@@ -15,15 +15,10 @@ public:
             }
         }
 
-        st.push(t);
-
-        t="";
-
         while(st.size()){
-            t += st.top();
-            st.pop();
+            t += " " + st.top();
 
-            if(st.size())   t+=" ";
+            st.pop();
         }
 
         return t;
