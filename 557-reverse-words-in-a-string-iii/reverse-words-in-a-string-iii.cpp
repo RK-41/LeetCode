@@ -15,7 +15,6 @@ public:
         }
 
         ans = t + " " + ans;
-
         ans.pop_back();
 
         return ans;
