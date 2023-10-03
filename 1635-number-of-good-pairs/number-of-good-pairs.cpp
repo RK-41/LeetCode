@@ -5,9 +5,7 @@ public:
 
         int ans=0;
         unordered_map<int,int> fr;
-        fr[nums[0]]=1;
-
-        for(int i=1; i<nums.size(); i++){
+        for(int i=0; i<nums.size(); i++){
             ans += fr[nums[i]];
 
             fr[nums[i]]++;
