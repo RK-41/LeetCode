@@ -13,9 +13,7 @@ public:
             ans *= 3;
             n -= 3;
         }
-
-        ans *= n;
-
-        return ans;
+        
+        return ans*n;
     }
 };
