@@ -1,7 +1,7 @@
 class Solution {
 public:
     int integerBreak(int n) {
-        // 06.10.23 
+        // 06.10.23 POtd
 
         if(n==2)    return 1;
         if(n==3)    return 2;
