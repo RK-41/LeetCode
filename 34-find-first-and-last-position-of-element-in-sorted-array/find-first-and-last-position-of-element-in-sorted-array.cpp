@@ -3,6 +3,7 @@ public:
     vector<int> searchRange(vector<int>& nums, int target) {
         
         // 22.09.23
+        // 09.10.23 POTD (Resubmission)
         
         int first=-1, last=-1, n=nums.size();
 
@@ -12,7 +13,7 @@ public:
             int mid=(lo+hi)/2;
 
             if(nums[mid] == target){
-                if((mid>0 && nums[mid-1]<target) || (mid==0)){
+                if(mid==0 || nums[mid-1]<target){
                     first=mid;
                     break;
                 }
@@ -34,7 +35,7 @@ public:
             int mid=(lo+hi)/2;
 
             if(nums[mid] == target){
-                if((mid<n-1 && nums[mid+1]>target) || (mid==n-1)){
+                if(mid==n-1 || nums[mid+1]>target){
                     last = mid;
                     break;
                 }
