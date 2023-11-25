@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> getSumAbsoluteDifferences(vector<int>& nums) {
-        // 25.11.23 
+        // 25.11.23 potd
         vector<int> ans(nums.size(), 0);
         int sum = accumulate(nums.begin(), nums.end(), 0);
         int left = 0, right = sum;
