@@ -13,21 +13,17 @@ public:
         for(auto w: words){
             int flg=1;
             unordered_map<char,int> temp;
+            
             for(auto c: w){
                 temp[c]++;
                 if(temp[c] > ch[c] || ch[c] == 0){
                     flg=0;
-                    cout<<w<<" "<<c<<" break; ";
                     break;
                 }
             }
             
             if(flg==0)
                 continue;
-
-            // for(auto c: w){
-            //     ch[c]--;
-            // }
 
             ans += w.size();
         }
