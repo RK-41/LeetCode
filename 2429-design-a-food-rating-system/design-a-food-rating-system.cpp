@@ -1,3 +1,4 @@
+// 17.12.23 potd
 class Food {
 public:
     int foodRating;
