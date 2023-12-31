@@ -3,7 +3,7 @@ public:
     int maxLengthBetweenEqualCharacters(string s) {
         // 31.12.23 POTD
         int ans=0;
-        unordered_map<char,int> first, last, count;
+        unordered_map<char,int> count, first, last;
         for(int i=0; i<s.size(); i++){
             count[s[i]]++;
             if(count[s[i]]==1){
