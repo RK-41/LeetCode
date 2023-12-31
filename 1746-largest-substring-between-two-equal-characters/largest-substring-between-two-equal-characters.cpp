@@ -9,16 +9,17 @@ public:
             if(count[s[i]]==1){
                 first[s[i]]=i;
             } else {
-                last[s[i]]=i;
+                // last[s[i]]=i;
+                ans = max(ans, i - first[s[i]] - 1);
             }
         }
 
         if(count.size()==s.size())
             return -1;
 
-        for(auto p: first){
-            ans = max(ans, last[p.first]-p.second-1);
-        }
+        // for(auto p: first){
+            // ans = max(ans, last[p.first]-p.second-1);
+        // }
 
         return ans;
     }
