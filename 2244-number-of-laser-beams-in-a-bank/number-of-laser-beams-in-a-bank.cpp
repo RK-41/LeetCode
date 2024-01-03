@@ -1,6 +1,7 @@
 class Solution {
 public:
     int numberOfBeams(vector<string>& bank) {
+        // 03.01.24 POTD
         int ans=0, curr=0, prev=0;
 
         for(int i=0; i<bank.size(); i++){
