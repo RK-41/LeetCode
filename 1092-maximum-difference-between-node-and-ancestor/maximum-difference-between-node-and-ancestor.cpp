@@ -12,7 +12,7 @@
 class Solution {
 public:
     int maxAncestorDiff(TreeNode* root) {
-        // 11.01.24
+        // 11.01.24 POTD
         int ans=0, mx=root->val, mn=root->val;
 
         findMaxDiff(root, ans, mx, mn);
@@ -26,7 +26,7 @@ public:
         int newmn = min(mn, r->val);
         ans = max(ans, abs(mx-r->val));
         ans = max(ans, abs(mn-r->val));
-        ans = max(ans, abs(newmn-r->val));
+        // ans = max(ans, abs(newmn-r->val));
 
         findMaxDiff(r->left, ans, newmx, newmn);
         findMaxDiff(r->right, ans, newmx, newmn);
