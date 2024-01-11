@@ -22,12 +22,12 @@ public:
     void findMaxDiff(TreeNode* r, int& ans, int& mx, int& mn){
         if(!r)  return;
 
-        int newmx = max(mx, r->val);
-        int newmn = min(mn, r->val);
         ans = max(ans, abs(mx-r->val));
         ans = max(ans, abs(mn-r->val));
-        // ans = max(ans, abs(newmn-r->val));
 
+        int newmx = max(mx, r->val);
+        int newmn = min(mn, r->val);
+        
         findMaxDiff(r->left, ans, newmx, newmn);
         findMaxDiff(r->right, ans, newmx, newmn);
     }
