@@ -1,7 +1,7 @@
 class Solution {
 public:
     int rob(vector<int>& nums) {
-        // 21.09.23
+        // 21.09.23 (potd)
         if(nums.size()==1)
             return nums[0];
 
