@@ -3,11 +3,12 @@ public:
     string frequencySort(string s) {
         // 07.02.24 POTD
         unordered_map<char,int> fr;
+        priority_queue<pair<int,char>> p;
+        
         for(auto c: s){
             fr[c]++;
         }
 
-        priority_queue<pair<int,char>> p;
         for(auto f: fr){
             p.push({f.second,f.first});
         }
