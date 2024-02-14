@@ -12,7 +12,16 @@ public:
                 pos.push_back(i);
         }
 
-        // APPROACH I: Operating on the given vector (NOT PERFECT)
+        // APPROACH I: Using another vector
+        vector<int> ans;
+        for(int i=0; i<n/2; i++){
+            ans.push_back(nums[pos[i]]);
+            ans.push_back(nums[neg[i]]);
+        }
+
+        return ans;
+
+        // APPROACH II: Operating on the given vector (NOT PERFECT)
         // int i=0, j=0, k=0;
         // while(i<n && j<pos.size() && k<neg.size()){
         //     if(i%2==0 && nums[i]<0){
@@ -47,13 +56,5 @@ public:
 
         // return nums;
 
-        // APPROACH II: Using another vector
-        vector<int> ans;
-        for(int i=0; i<n/2; i++){
-            ans.push_back(nums[pos[i]]);
-            ans.push_back(nums[neg[i]]);
-        }
-
-        return ans;
     }
 };
