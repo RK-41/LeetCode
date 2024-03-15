@@ -1,2 +1,2 @@
 # LeetCode
-This repository contains my solutions to various LeetCode DSA problems
+This repository contains solutions to various LeetCode DSA problems
