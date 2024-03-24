@@ -1,17 +1,15 @@
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
-        // 19.09.23 POTD
-        // int ans;
+        // 24.03.24 (POTD)
         
         for(auto n: nums){
             nums[abs(n)]*=-1;
             if(nums[abs(n)] > 0){
-                nums[0] = abs(n);
-                break;
+                return abs(n);
             }
         }
 
-        return nums[0];
+        return 0;
     }
 };
