@@ -11,8 +11,6 @@ public:
 
             // Size of queue is frequency of element
             // If frequency if k+1, remove one
-
-
             if(fo[nums[r]].size() == k+1){
                 // Here, l (left) is starting point of the window
                 // If first occurence is inside window, update l (left)
