@@ -8,7 +8,6 @@ public:
             return 0;
 
         int ans=0, n=s.size(), cnt=0;
-        char prev='0';
 
         for(int i=0; i<n; i++){
             cnt += s[i]=='(' ? 1 : s[i]==')' ? -1 : 0;
