@@ -11,10 +11,6 @@ public:
         for(int i=s.size()-2; i>=0; i--){
             closeCnt[i] += closeCnt[i+1] + (s[i]==')' ? 1:0);
         }
-        // for(auto i: closeCnt){
-        //     cout<<i;
-        // }
-        // cout<<endl;
         
         for(int i=0; i<n; i++){
             if(s[i]=='('){
@@ -32,7 +28,6 @@ public:
             } else{
                 ans += s[i];
             }
-            // cout<<ans<<cnt<<endl;
         }
 
         return ans;
