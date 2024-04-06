@@ -4,7 +4,6 @@ public:
         // 06.04.24 POTD
         string ans;
         int n=s.size(), cnt=0;
-        stack<char> stk;
         vector<int> closeCnt(n,0);
 
         closeCnt[n-1] = s[n-1]==')' ? 1:0;
@@ -16,13 +15,11 @@ public:
             if(s[i]=='('){
                 if(closeCnt[i]>cnt){
                     ans += s[i];
-                    stk.push(s[i]);
                     cnt++;
                 }
             } else if(s[i]==')'){
-                if(stk.size()){
+                if(cnt>0){
                     ans += s[i];
-                    stk.pop();
                     cnt--;
                 }
             } else{
