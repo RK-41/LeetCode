@@ -35,7 +35,7 @@ public:
         if(abs(left-right) > ast)
             return false;
         
-        if(cnt < 0) return false;
+        // if(cnt < 0) return false;
 
         return cnt==0;
     }
