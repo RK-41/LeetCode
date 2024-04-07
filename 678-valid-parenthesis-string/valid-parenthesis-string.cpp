@@ -29,8 +29,8 @@ public:
             cout<<cnt<<" ";
         }
 
-        if(last==-1)
-            return false;
+        // if(last==-1)
+        //     return false;
 
         return cnt==0;
     }
