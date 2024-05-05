@@ -9,7 +9,7 @@
 class Solution {
 public:
     void deleteNode(ListNode* node) {
-        // 05.05.24 POTD
+        // 05.05.24 POTDf
         node->val = node->next->val;
         node->next = node->next->next;
     }
