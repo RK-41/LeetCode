@@ -1,8 +1,8 @@
 class Solution {
 public:
     vector<string> findRelativeRanks(vector<int>& score) {
-        // 08.05.24 POTd
-        
+        // 08.05.24 POTD
+
         vector<string> ans;
         vector<int> v(score.begin(), score.end());
         unordered_map<int,int> sortedIdx;
