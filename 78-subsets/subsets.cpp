@@ -31,3 +31,24 @@ public:
         return subsets;
     }
 };
+
+/*
+Visualizing subset creation as nums array is iterated from start to end:
+
+a1
+
+a2
+a1,a2
+
+a3
+a1,a3
+a2,a3
+a1,a2,a3
+
+a4
+a1,a3,a4
+a2,a3,a4
+a1,a2,a3,a4
+
+
+*/
