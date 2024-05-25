@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<string> wordBreak(string s, vector<string>& wordDict) {
-        // 25.05.24
+        // 25.05.24 POTD
         vector<string> ans;
         unordered_set<string> st(wordDict.begin(), wordDict.end());
 
