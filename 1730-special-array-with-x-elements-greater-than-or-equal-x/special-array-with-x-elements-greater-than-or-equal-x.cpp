@@ -8,9 +8,9 @@ public:
         if(n <= mn)
             return n;
 
-        int mx = *max_element(nums.begin(), nums.end());
-        if(mx == 0)
-            return -1;
+        // int mx = *max_element(nums.begin(), nums.end());
+        // if(mx == 0)
+        //     return -1;
         
         unordered_map<int,int> um;
         for(int i=n; i>0; i--){
