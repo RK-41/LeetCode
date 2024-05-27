@@ -14,8 +14,8 @@ public:
         
         unordered_map<int,int> um;
         for(int i=1; i<=n; i++){
-            if(um[i] > 0)   continue;
-            
+            if(um.find(i) != um.end())   continue;
+
             for(auto e: nums){
                 if(i <= e){
                     um[i]++;
