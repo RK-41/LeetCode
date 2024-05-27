@@ -13,7 +13,7 @@ public:
             return -1;
         
         unordered_map<int,int> um;
-        for(int i=n; i>0; i--){
+        for(int i=1; i<=n; i++){
             for(auto e: nums){
                 if(i <= e){
                     um[i]++;
