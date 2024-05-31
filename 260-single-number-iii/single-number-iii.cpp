@@ -5,12 +5,12 @@ public:
         if(nums.size() == 2)
             return nums;
 
-        long long int xr1=0, xr2=0;
+        int xr1=0, xr2=0;
         for(int a: nums){
             xr1 ^= a;
         }
 
-        int lowestSetBit = xr1 & (-xr1);
+        unsigned int lowestSetBit = xr1 & (-(unsigned int)xr1);
         xr1 = 0;
         for(int a: nums){
             if(lowestSetBit & a){
