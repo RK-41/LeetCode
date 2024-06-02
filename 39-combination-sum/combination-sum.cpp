@@ -4,9 +4,8 @@ public:
         // 02.06.24
         // Approach: Recursion - Pick & Not Pick
         vector<vector<int>> ans;
-        vector<int> comb;
 
-        solve(0, candidates, target, comb, ans);
+        solve(0, candidates, target, {}, ans);
 
         return ans;
     }
