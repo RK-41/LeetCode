@@ -17,12 +17,8 @@ public:
                 mod += k;
             }
 
-            // if(cumMap.count(mod)){
-                count += cumMap[mod];
-                cumMap[mod] += 1;
-            // } else {
-                // cumMap[mod] = 1;
-            // }
+            count += cumMap[mod];
+            cumMap[mod] += 1;
         }
 
         return count;
