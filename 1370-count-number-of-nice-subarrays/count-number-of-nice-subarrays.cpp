@@ -1,7 +1,7 @@
 class Solution {
 public:
     int numberOfSubarrays(vector<int>& nums, int k) {
-        // 22.06.24 POTD
+        // 22.06.24 POTD (DAMN!)
         int ans=0, n=nums.size();
         vector<int> oddPos;
 
