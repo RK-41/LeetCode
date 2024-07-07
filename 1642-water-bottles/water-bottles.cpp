@@ -2,11 +2,14 @@ class Solution {
 public:
     int numWaterBottles(int numBottles, int numExchange) {
         // 07.07.24 POTD
-        int ans = numBottles;
+        int ans = numBottles, nb = numBottles;
 
         while(numBottles >= numExchange){
-            numBottles += 1 - numExchange;
-            ans++;
+            ans += numBottles/numExchange;
+            nb %= numExchange;
+            nb += numBottles/numExchange;
+
+            numBottles = nb;
         }
 
         return ans;
