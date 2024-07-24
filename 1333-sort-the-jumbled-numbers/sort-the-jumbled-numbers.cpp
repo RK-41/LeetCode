@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> sortJumbled(vector<int>& mapping, vector<int>& nums) {
-        // 24.07.24
+        // 24.07.24 POTD
         vector<int> updatedNums, ans;
         unordered_map<int,int> um;
         unordered_map<int,vector<int>> newMapping;
@@ -12,7 +12,7 @@ public:
 
         for(auto n: nums){
             int x = n, y = 0, p = 1;
-            
+
             if(n == 0){
                 y = um[n];
             }
