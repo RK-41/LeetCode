@@ -12,7 +12,7 @@ class Solution {
 public:
     ListNode* insertGreatestCommonDivisors(ListNode* head) {
         // 10.09.24 POtd
-        if(!head || !head->next)    return head;
+        if(!head->next)    return head;
 
         ListNode *h=head;
 
