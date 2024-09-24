@@ -1,7 +1,7 @@
 class Solution {
 public:
     int longestCommonPrefix(vector<int>& arr1, vector<int>& arr2) {
-        // 24.09.24
+        // 24.09.24 potd
         int ans=0;
         unordered_map<string,int> prefixMap;
 
