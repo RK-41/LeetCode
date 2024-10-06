@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool areSentencesSimilar(string sentence1, string sentence2) {
-        // 06.10.24 POtd
+        // 06.10.24 Potd
         auto splitWords = [](const string& sentence){
             vector<string> words;
             string s;
