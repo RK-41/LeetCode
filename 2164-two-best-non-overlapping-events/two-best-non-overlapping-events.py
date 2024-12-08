@@ -1,7 +1,7 @@
 class Solution:
     def maxTwoEvents(self, events: List[List[int]]) -> int:
         # 08.12.24
-        ans, mx = 0, 0
+        ans = 0
         n = len(events)
 
         # Sorting events by their starting time
