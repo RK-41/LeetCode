@@ -7,7 +7,7 @@ class Solution:
         for g in gifts:
             heappush(heap, -1 * g)
 
-        while k>0 and len(heap):
+        while k>0:
             mx = -1 * heappop(heap)
             heappush(heap, -1 * floor(sqrt(mx)))
             k -= 1
