@@ -1,6 +1,6 @@
 class Solution:
     def continuousSubarrays(self, nums: List[int]) -> int:
-        # 14.12.24
+        # 14.12.24 potd
         ans, left, n = 0, 0, len(nums)
         minD, maxD = deque(), deque()
 
