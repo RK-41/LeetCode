@@ -15,3 +15,8 @@ class Solution:
             ans = max(ans, values[i] + i + maxValJRL[i+1])
 
         return ans
+
+        # Optimal solution:
+        # One pass from 1 to n-1
+        # Use a single variable x to keep track of max (val[i] + i)
+        # Update ans with max(ans, m + val[j] - j)
