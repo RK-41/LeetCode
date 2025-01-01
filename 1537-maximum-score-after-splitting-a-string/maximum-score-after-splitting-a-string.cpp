@@ -1,18 +1,18 @@
 class Solution {
 public:
     int maxScore(string s) {
-        // 22.12.23 POTD
+        // 01.01.25 POTD
         int ans=0, n=s.size();
-        vector<int> zeroCount(n), oneCount(n);
-        zeroCount[0] = '1'-s[0];
-        oneCount[n-1] = s[n-1]-'0';
-        for(int i=1; i<n; i++){
-            zeroCount[i] = '1'-s[i]+zeroCount[i-1];
-            oneCount[n-1-i] = s[n-1-i]-'0'+oneCount[n-i];
+        int oneCount = 0, zeroCount = '1'-s[0];
+
+        for(int i=n-1; i>0; i--){
+            oneCount += s[i]-'0';
         }
 
         for(int i=1; i<n; i++){
-            ans = max(ans, zeroCount[i-1]+oneCount[i]);
+            ans = max(ans, zeroCount + oneCount);
+            oneCount -= (s[i]-'0');
+            zeroCount += ('1'-s[i]);
         }
 
         return ans;
