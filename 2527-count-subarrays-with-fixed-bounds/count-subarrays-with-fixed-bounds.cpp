@@ -1,7 +1,7 @@
 class Solution {
 public:
     long long countSubarrays(vector<int>& nums, int minK, int maxK) {
-        // 31.03.24 potd
+        // 26.04.25 (potd)
         long long ans=0;
         int badIdx=-1, leftIdx=-1, rightIdx=-1;
 
