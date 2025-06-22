@@ -5,11 +5,9 @@ class Solution:
         n = len(s)
         t = ''
         for i in range(0,n,k):
-            print(s[i:i+k])
             ans.append(s[i:i+k])
 
         if len(ans[-1]) < k:
-            t = ans[-1] + (fill * (k - len(ans[-1])))
-            ans[-1] = t
+            ans[-1] = ans[-1] + (fill * (k - len(ans[-1])))
         
         return ans
