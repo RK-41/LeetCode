@@ -3,7 +3,7 @@ class Solution:
         # 22.06.25 POTD
         ans = []
         n = len(s)
-        t = ''
+
         for i in range(0,n,k):
             ans.append(s[i:i+k])
 
