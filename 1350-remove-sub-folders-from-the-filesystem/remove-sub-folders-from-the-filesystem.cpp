@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<string> removeSubfolders(vector<string>& folder) {
-        // 25.10.24
+        // 19.07.25 (potd)
         vector<string> ans;
         sort(folder.begin(), folder.end());
         ans.push_back(folder[0]);
