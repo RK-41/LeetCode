@@ -1,7 +1,7 @@
 class Solution {
 public:
     string largestGoodInteger(string num) {
-        // 04.12.23 POTD
+        // 24.08.25 (POTD)
 
         string ans;
         int good=INT_MIN, len=1, prev;
