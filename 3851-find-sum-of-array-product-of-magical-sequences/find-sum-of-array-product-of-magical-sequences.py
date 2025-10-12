@@ -3,7 +3,7 @@ from functools import lru_cache
 import math
 from typing import List
 
-# 12.10.25 pots
+# 12.10.25 potd
 class Solution:
     def magicalSum(self, total_count: int, target_odd: int, numbers: List[int]) -> int:
         
