@@ -1,6 +1,7 @@
 class Solution:
     def countUnguarded(self, m: int, n: int, guards: List[List[int]], walls: List[List[int]]) -> int:
         # 21.11.24 potd
+        # 02.11.25 potd
         grid = [[0] * n for _ in range(m)]
         # 0 = free, 1 = guard, 2 = wall, 3 = guardable
 
